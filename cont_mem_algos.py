@@ -23,6 +23,7 @@ def best_fit(work_memory, req, index):
     new_memory = work_memory[:]
     if new_size == 0:
         del new_memory[best_index]
+        best_index = best_index % len(new_memory)
     else:
         new_memory[best_index] = (base_asignada + req, new_size)
 
